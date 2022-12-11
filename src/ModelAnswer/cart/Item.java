@@ -1,7 +1,6 @@
 package ModelAnswer.cart;
 
 public class Item {
-  
 
     // members
     private String code = "";
@@ -9,11 +8,13 @@ public class Item {
     private Float price = 0f;
     private Integer quantity = 0;
 
+    //constructor
     public Item(String code, String name) {
         this.code = code;
         this.name = name;
     }
 
+    //getters and setters
     public String getCode() { return code; }
     public void setCode(String code) { this.code = code; }
 
@@ -26,6 +27,7 @@ public class Item {
     public Integer getQuantity() { return quantity; }
     public void setQuantity(Integer quantity) { this.quantity = quantity; }
 
+    //method
     public Float totalPrice() {
         return this.price * this.quantity;
     }

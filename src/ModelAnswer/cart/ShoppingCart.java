@@ -5,16 +5,18 @@ import java.util.List;
 
 public class ShoppingCart {
 
-
+    //attributes
     public static final String APPLE = "apple";
     public static final String ORANGE = "orange";
 
     private List<Item> cart;
 
+    //constructor
     public ShoppingCart() {
         this.cart = new LinkedList<>();
     }
 
+    //method
     public void listContents() {
 
         if (cart.size() <= 0) {
@@ -26,6 +28,7 @@ public class ShoppingCart {
         for (Integer i = 0; i < cart.size(); i++) {
             Item item = cart.get((int)i);
             System.out.printf("%d: %s, %d, $%.2f\n", i + 1, item.getName(), item.getQuantity(), item.getPrice());
+            
         }
     }
 
@@ -69,6 +72,7 @@ public class ShoppingCart {
         // This is called the for-each loop. 
         // An alternative for loop, used only for arrays and collection
         // The for-each loops loops the contents
+        //for (type var : array) 
         for (Item item: this.cart) {
             Float subtotal = item.getPrice() * item.getQuantity();
             System.out.printf("%s [%s] %d@%.2f=$%.2f\n", 
